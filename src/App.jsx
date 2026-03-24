@@ -878,12 +878,13 @@ h1{white-space:pre-line;font-size:clamp(38px,5vw,68px);line-height:1.04;margin:1
 .progress{height:5px;background:rgba(148,163,184,.15);border-radius:999px;overflow:hidden;margin:8px 0}
 .progress span{display:block;height:100%}.reset{display:block;margin:18px auto 0;background:none;border:0;color:var(--dim);opacity:.5;cursor:pointer}
 .quiz-h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.back{border:1px solid var(--border);background:var(--bg2);color:var(--text);padding:8px 11px;border-radius:10px;cursor:pointer}
-.qcard{padding:16px}.xpb{display:inline-block;background:rgba(251,191,36,.11);border:1px solid rgba(251,191,36,.35);color:var(--gold);padding:4px 9px;border-radius:999px;font-family:'Fira Code',monospace;font-size:12px}
-.q{font-size:20px;font-weight:600;margin:11px 0 14px}.opts{display:grid;gap:9px}
-.opt{display:flex;align-items:flex-start;gap:10px;border:1px solid var(--border);border-radius:12px;padding:11px;background:#0a1326;cursor:pointer;transition:.2s;text-align:left}
-.opt:hover{background:rgba(129,140,248,.08)}.opt:disabled{cursor:not-allowed;opacity:1}.opt.ok{border-color:rgba(52,211,153,.65);background:rgba(52,211,153,.12)}
-.opt.bad{border-color:rgba(248,113,113,.65);background:rgba(248,113,113,.12)}.letter{width:26px;height:26px;display:grid;place-items:center;border-radius:8px;background:rgba(129,140,248,.2);font-weight:700}
-.exp{margin-top:13px;padding:12px;border-radius:11px;border:1px solid var(--border);background:rgba(13,20,36,.78)}.oktxt{color:var(--green);font-weight:700}.badtxt{color:var(--red);font-weight:700}.enc{color:var(--gold);margin-top:8px}
+.qcard{padding:16px;background:linear-gradient(180deg,rgba(20,31,56,.96),rgba(13,20,36,.95));border-color:rgba(129,140,248,.28)}
+.xpb{display:inline-block;background:rgba(251,191,36,.16);border:1px solid rgba(251,191,36,.48);color:#fcd34d;padding:4px 9px;border-radius:999px;font-family:'Fira Code',monospace;font-size:12px}
+.q{font-size:20px;font-weight:700;margin:11px 0 14px;color:#e7ecff;text-shadow:0 1px 0 rgba(0,0,0,.18)}.opts{display:grid;gap:9px}
+.opt{display:flex;align-items:flex-start;gap:10px;border:1px solid rgba(129,140,248,.28);border-radius:12px;padding:11px;background:#0f1a33;cursor:pointer;transition:.2s;text-align:left;color:#dce5ff}
+.opt:hover{background:rgba(129,140,248,.16);border-color:rgba(129,140,248,.5)}.opt:disabled{cursor:not-allowed;opacity:1}.opt.ok{border-color:rgba(52,211,153,.75);background:rgba(52,211,153,.16);color:#bbf7d0}
+.opt.bad{border-color:rgba(248,113,113,.75);background:rgba(248,113,113,.16);color:#fecaca}.letter{width:26px;height:26px;display:grid;place-items:center;border-radius:8px;background:rgba(129,140,248,.32);font-weight:700;color:#eef2ff}
+.exp{margin-top:13px;padding:12px;border-radius:11px;border:1px solid rgba(129,140,248,.34);background:rgba(20,31,56,.9)}.oktxt{color:var(--green);font-weight:700}.badtxt{color:var(--red);font-weight:700}.enc{color:var(--gold);margin-top:8px}
 .next{margin-top:12px;width:100%;border:0;border-radius:12px;padding:12px;color:#fff;font-weight:700;cursor:pointer;background:linear-gradient(135deg,var(--accent),var(--accent2))}
 .result{max-width:620px;margin:38px auto;padding:20px;text-align:center}.result .icon{font-size:52px}.small{color:var(--dim)}
 .xp-pop{position:fixed;left:50%;top:52%;transform:translate(-50%,-50%);z-index:10000;color:var(--gold);font-size:44px;font-weight:900;font-family:'Fira Code',monospace;text-shadow:0 0 26px rgba(251,191,36,.5);animation:xpFly 1.8s ease both;pointer-events:none}
