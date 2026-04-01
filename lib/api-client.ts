@@ -7,26 +7,17 @@ async function safeJson(res: Response) {
   }
 }
 
-export async function apiLogin(username: string, password: string) {
-  const res = await fetch("/api/auth/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, password }),
-  });
-  return safeJson(res);
-}
-
-export async function apiRegister(username: string, password: string) {
-  const res = await fetch("/api/auth/register", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, password }),
-  });
-  return safeJson(res);
-}
-
 export async function apiLogout() {
   await fetch("/api/auth/logout", { method: "POST" });
+}
+
+export async function apiOAuthLogin(idToken: string) {
+  const res = await fetch("/api/auth/oauth", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ idToken }),
+  });
+  return safeJson(res);
 }
 
 export async function getProgress() {
@@ -46,4 +37,3 @@ export async function saveProgress(xp: number, streak: number, answered: Record<
 export async function resetProgress() {
   await fetch("/api/user/reset", { method: "POST" });
 }
-

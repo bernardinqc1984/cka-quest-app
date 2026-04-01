@@ -51,6 +51,9 @@ export type I18nStrings = {
   f4d: string;
   exam: string;
   welcome: string;
+  orContinueWith: string;
+  signInGoogle: string;
+  signInGithub: string;
 };
 
 export const LANGS: Record<LangKey, I18nStrings> = {
@@ -107,6 +110,9 @@ export const LANGS: Record<LangKey, I18nStrings> = {
     f4d: "Ta session est sauvegardée automatiquement.",
     exam: "Examen CKA — 2h · 66% min · 395 USD",
     welcome: "Bienvenue",
+    orContinueWith: "Ou continuer avec",
+    signInGoogle: "Continuer avec Google",
+    signInGithub: "Continuer avec GitHub",
   },
   en: {
     flag: "🇬🇧",
@@ -161,6 +167,9 @@ export const LANGS: Record<LangKey, I18nStrings> = {
     f4d: "Your journey is saved automatically.",
     exam: "CKA Exam — 2h · 66% min · 395 USD",
     welcome: "Welcome",
+    orContinueWith: "Or continue with",
+    signInGoogle: "Continue with Google",
+    signInGithub: "Continue with GitHub",
   },
   pt: {
     flag: "🇧🇷",
@@ -213,6 +222,9 @@ export const LANGS: Record<LangKey, I18nStrings> = {
     f4d: "Seu progresso é salvo automaticamente.",
     exam: "Exame CKA — 2h · 66% min · 395 USD",
     welcome: "Bem-vindo",
+    orContinueWith: "Ou continuar com",
+    signInGoogle: "Continuar com Google",
+    signInGithub: "Continuar com GitHub",
   },
   it: {
     flag: "🇮🇹",
@@ -265,6 +277,9 @@ export const LANGS: Record<LangKey, I18nStrings> = {
     f4d: "Progressi salvati automaticamente.",
     exam: "Esame CKA — 2h · 66% min · 395 USD",
     welcome: "Benvenuto",
+    orContinueWith: "O continua con",
+    signInGoogle: "Continua con Google",
+    signInGithub: "Continua con GitHub",
   },
   th: {
     flag: "🇹🇭",
@@ -317,6 +332,9 @@ export const LANGS: Record<LangKey, I18nStrings> = {
     f4d: "บันทึกอัตโนมัติทุกช่วง",
     exam: "ข้อสอบ CKA — 2ชม. · ขั้นต่ำ 66% · 395 USD",
     welcome: "ยินดีต้อนรับ",
+    orContinueWith: "หรือดำเนินการด้วย",
+    signInGoogle: "ดำเนินการด้วย Google",
+    signInGithub: "ดำเนินการด้วย GitHub",
   },
   zh: {
     flag: "🇨🇳",
@@ -369,6 +387,9 @@ export const LANGS: Record<LangKey, I18nStrings> = {
     f4d: "自动保存你的学习进度。",
     exam: "CKA 考试 — 2小时 · 最低66% · 395 美元",
     welcome: "欢迎",
+    orContinueWith: "或通过以下方式继续",
+    signInGoogle: "使用 Google 继续",
+    signInGithub: "使用 GitHub 继续",
   },
   ru: {
     flag: "🇷🇺",
@@ -421,6 +442,9 @@ export const LANGS: Record<LangKey, I18nStrings> = {
     f4d: "Прогресс сохраняется автоматически.",
     exam: "Экзамен CKA — 2ч · мин 66% · 395 USD",
     welcome: "Добро пожаловать",
+    orContinueWith: "Или продолжить через",
+    signInGoogle: "Войти через Google",
+    signInGithub: "Войти через GitHub",
   },
   ar: {
     flag: "🇸🇦",
@@ -473,6 +497,9 @@ export const LANGS: Record<LangKey, I18nStrings> = {
     f4d: "يتم حفظ تقدمك تلقائيًا.",
     exam: "اختبار CKA — ساعتان · حد أدنى 66% · 395 USD",
     welcome: "مرحبًا",
+    orContinueWith: "أو المتابعة عبر",
+    signInGoogle: "المتابعة مع Google",
+    signInGithub: "المتابعة مع GitHub",
   },
 };
 

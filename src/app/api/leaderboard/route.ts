@@ -1,18 +1,18 @@
 import { NextResponse } from "next/server";
-import { ensureDB } from "@/lib/ensure-db";
-import { sql } from "@/lib/db";
+import { getDb } from "@/lib/firebase-admin";
 
 export const runtime = "nodejs";
 
 export async function GET() {
-  await ensureDB();
-  const result = await sql`
-    SELECT u.username, p.xp, p.streak, p.updated_at
-    FROM progress p
-    JOIN users u ON p.user_id = u.id
-    ORDER BY p.xp DESC, p.updated_at DESC
-    LIMIT 25
-  `;
-  return NextResponse.json({ rows: result.rows });
+  const snap = await getDb().collection("users").orderBy("xp", "desc").limit(25).get();
+  const rows = snap.docs.map((doc) => {
+    const data = doc.data();
+    return {
+      username: data.username as string,
+      xp: (data.xp as number) || 0,
+      streak: (data.streak as number) || 0,
+      updated_at: (data.updatedAt as { toDate?: () => Date } | null)?.toDate?.()?.toISOString() ?? null,
+    };
+  });
+  return NextResponse.json({ rows });
 }
-
