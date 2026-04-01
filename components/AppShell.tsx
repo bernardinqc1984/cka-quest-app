@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { LangKey, LANGS, DEFAULT_LANG } from "@/lib/i18n";
-import { getLangCookie, setLangCookie } from "@/lib/lang-cookie";
+import { LANGS } from "@/lib/i18n";
+import { useLang } from "@/components/LangProvider";
 import { apiLogout, getProgress, resetProgress } from "@/lib/api-client";
 import { levelForXP } from "@/lib/levels";
 import { TopBar } from "@/components/TopBar";
@@ -15,17 +15,9 @@ export type UserState = {
 };
 
 export function useAppState() {
-  const [lang, setLang] = useState<LangKey>(() => {
-    const l = getLangCookie();
-    return l && LANGS[l] ? l : DEFAULT_LANG;
-  });
+  const { lang, setLang } = useLang();
   const [loaded, setLoaded] = useState(false);
   const [user, setUser] = useState<UserState | null>(null);
-
-  useEffect(() => {
-    setLangCookie(lang);
-    if (typeof document !== "undefined") document.documentElement.dir = LANGS[lang]?.dir || "ltr";
-  }, [lang]);
 
   const refresh = async () => {
     const data = await getProgress();

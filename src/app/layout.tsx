@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fira_Code, Outfit } from "next/font/google";
+import { LangProvider } from "@/components/LangProvider";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -24,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} ${firaCode.variable}`}>
-      <body>{children}</body>
+      <body><LangProvider>{children}</LangProvider></body>
     </html>
   );
 }
